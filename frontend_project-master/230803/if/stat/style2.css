@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw auto;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.box {
+    width: fit-content;
+    height: 100vh auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    overflow: hidden;
+}
+
+.container .eight,
+.three,
+.item {
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid rgb(50, 50, 50)
+}
+
+/* .container .three {
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid rgb(50,50,50)
+}
+
+.container .nine {
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid rgb(50,50,50)
+} */
+
+.item {
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.item .active {
+    background-color: navy;
+    object-fit: cover
+}
+
+.container .text1 {
+    font-size: 50px;
+    font-weight: 525;
+}
+
+.container .text2 {
+    color: rgb(100, 100, 100);
+    font-weight: 550;
+}

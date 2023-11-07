@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- user swiper from CDN에서 module모드 말고 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- swiper css style/size를 넣기 위해 style sheet 연결 -->
+</head>
+
+<body>
+    <!-- add swiper HTML Layout -->
+
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide ">
+                <figure><img src="/image/네프티스의 창황신.jpg" alt=""></figure>
+            </div>
+            <div class="swiper-slide ">
+                <figure><img src="/image/라의 익신룡.jpg" alt=""></figure>
+            </div>
+            <div class="swiper-slide ">
+                <figure><img src="/image/라이트엔드드래곤.jpg" alt=""></figure>
+            </div>
+            <div class="swiper-slide ">
+                <figure><img src="/image/레인보우 네오스.jpg" alt=""></figure>
+            </div>
+            <div class="swiper-slide ">
+                <figure><img src="/image/마동석.jpg" alt=""></figure>
+            </div>
+            <div class="swiper-slide ">
+                <figure><img src="/image/붉은 눈의 비룡.jpg" alt=""></figure>
+            </div>
+            <div class="swiper-slide ">
+                <figure><img src="/image/사이버트윈드래곤.jpg" alt=""></figure>
+            </div>
+            <div class="swiper-slide ">
+                <figure><img src="/image/욕망의 항아리.jpg" alt=""></figure>
+            </div>
+            <div class="swiper-slide ">
+                <figure><img src="/image/칼리.png" alt=""></figure>
+            </div>
+            <div class="swiper-slide ">
+                <figure><img src="/image/타로.png" alt=""></figure>
+            </div>
+            <div class="swiper-slide ">
+                <figure><img src="/image/푸른 눈의 백룡.png" alt=""></figure>
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>const swiper = new Swiper('.swiper', {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            // Optional parameters
+            direction: 'horizontal',
+            // direction: 'vertical' : 세로로 이동
+            // direction: 'horizontal': 가로로 이동
+            loop: true,
+
+            // // If we need pagination
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 20,
+                slideShadows: false,
+            },
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });</script>
+    <!-- <script>initialize swiper</script> 이렇게 작성 -->
+</body>
+
+</html>

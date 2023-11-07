@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 300px;
+    height: 150px;
+    background-color: aqua;
+    padding: 10px;
+    box-sizing: border-box:
+}
+
+.box2 {
+    width: 200px;
+    height: 200px;
+    background-color: yellowgreen;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.box3 {
+    background-color: blueviolet;
+    width: 25vw; 
+    height: 50vh;
+    padding: 20px;
+
+}
+.container{font-size:20px;}
+.container.btn{font-size:1em;}
+.btn{
+    border:0;
+    padding:0.5rem 1rem;
+    border-radius:0.5rem;
+    cursor:pointer;
+}
+.btn:hover{background-color:aquamarine;color:white;}
+    
+
+
+/*ctrl+/ 주석처리, 메모할 때 편함  */
+/* .클래스이름+tqp을 누르면 자동으로 클래스가 주어짐
+/* ex).container.btn----> container안의 btn에 적용해라 */
+ /* em은 부모요소의 영향을 받음, rem은 자식요소에서 적용 (1rem은 가장 상위요소를 적용(ex-기본 브라우저의 기본속성 16px) 1rem=16=px) */

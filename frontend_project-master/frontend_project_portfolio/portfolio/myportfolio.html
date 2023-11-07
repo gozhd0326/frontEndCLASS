@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="myportfolio.css">
+    <link href="path/to/lightbox.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="smdot">
+        <div class="dot"></div>
+    </div>
+    <!-- https://tunis-nextjs.vercel.app/home-dark 참고사이트 -->
+    <!-- https://frontend-project-portfolio.netlify.app/ 내 사이트 -->
+    <div class="box"></div>
+    <div class="container">
+        <div class="theme-switcher">
+            <div class="day"> <iconify-icon icon="solar:sun-bold"></iconify-icon></div>
+            <div class="night"><iconify-icon icon="ph:moon-bold"></iconify-icon></div>
+        </div>
+        <header>
+            <ul class="taplist">
+                <li class="list"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-house" viewBox="0 0 16 16">
+                        <path
+                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+
+                    </svg> <a class="on" href="home.html">HOME</a>
+                </li>
+                <li class="list"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg><a class="on" href="aboutme.html">ABOUT</a>
+                </li>
+                <li class="list"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-briefcase" viewBox="0 0 16 16">
+                        <path
+                            d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z" />
+                    </svg><a class="on" href="myportfolio.html">PORTFOLIO</a>
+                </li>
+                <li class="list"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-envelope-open" viewBox="0 0 16 16">
+                        <path
+                            d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.817l5.75 3.45L8 8.917l1.25.75L15 6.217V5.4a1 1 0 0 0-.53-.882l-6-3.2ZM15 7.383l-4.778 2.867L15 13.117V7.383Zm-.035 6.88L8 10.082l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738ZM1 13.116l4.778-2.867L1 7.383v5.734ZM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765l6-3.2Z" />
+                    </svg><a class="on" href="">CONTACT</a>
+                </li>
+                <li class="list"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bootstrap" viewBox="0 0 16 16">
+                        <path
+                            d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062V12zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377H6.375z" />
+                        <path
+                            d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H4z" />
+                    </svg><a class="on" href="">BLOG</a>
+                </li>
+            </ul>
+            <div class="title-section">
+                <h1>MY<span class="sub">PORTFOLIO</span></h1>
+                <span class="title-bg">WORKS</span>
+            </div>
+        </header>
+        <main>
+            <div class="mainbody">
+                <!-- <div class="tabs"> -->
+                <ul class="fade-up">
+                    <li class="taps">ALL</li>
+                    <li class="taps">LOGO</li>
+                    <li class="taps">VIDEO</li>
+                    <li class="taps">GRAPHIC DESIGN</li>
+                    <li class="taps">MOCKUP</li>
+                </ul>
+                <div class="contents">
+                    <div class="tabs-tab-panel show">
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/art.jpg" alt="mockup project"></div>
+                                <h3 class="content-title"><span>mockup project</span></h3>
+                            </div>
+                        </div>
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/youtube.jpg" alt="youtube project"></div>
+                                <h3 class="content-title"><span>youtube project</span></h3>
+                            </div>
+                        </div>
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/djjpg.jpg" alt="slider project"></div>
+                                <h3 class="content-title"><span>slider project</span></h3>
+                            </div>
+                        </div>
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/communit.webp" alt="local project"></div>
+                                <h3 class="content-title"><span>local project</span></h3>
+                            </div>
+                        </div>
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/stickies.jpg" alt="sass project"></div>
+                                <h3 class="content-title"><span>saas porject</span></h3>
+                            </div>
+                        </div>
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/cactus.jpg" alt="mockup project"></div>
+                                <h3 class="content-title"><span>mockup project</span></h3>
+                            </div>
+                        </div>
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/facebook.webp" alt="facebook project">
+                                </div>
+                                <h3 class="content-title"><span>facebook project</span></h3>
+                            </div>
+                        </div>
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/never-stop-learning.jpg" alt="dribble">
+                                </div>
+                                <h3 class="content-title"><span>dribble project</span></h3>
+                            </div>
+                        </div>
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/never-stop-dreaming.jpg" alt="behence project">
+                                </div>
+                                <h3 class="content-title"><span>behence project</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-tab-panel">
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/art.jpg" alt="mockup project"></div>
+                                <h3 class="content-title"><span>mockup project</span></h3>
+                            </div>
+                        </div>
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/communit.webp" alt="local project"></div>
+                                <h3 class="content-title"><span>local project</span></h3>
+                            </div>
+                        </div>
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/stickies.jpg" alt="sass project"></div>
+                                <h3 class="content-title"><span>saas porject</span></h3>
+                            </div>
+                        </div>
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/facebook.webp" alt="facebook project">
+                                </div>
+                                <h3 class="content-title"><span>facebook project</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-tab-panel">
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/youtube.jpg" alt="youtube project"></div>
+                                <h3 class="content-title"><span>youtube project</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/communit.webp" alt="local project"></div>
+                                <h3 class="content-title"><span>local project</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-tab-panel">
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/never-stop-learning.jpg" alt="dribble">
+                                </div>
+                                <h3 class="content-title"><span>dribble project</span></h3>
+                            </div>
+                        </div>
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/never-stop-dreaming.jpg" alt="behence project">
+                                </div>
+                                <h3 class="content-title"><span>behence project</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-tab-panel">
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/art.jpg" alt="mockup project"></div>
+                                <h3 class="content-title"><span>mockup project</span></h3>
+                            </div>
+                        </div>
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/cactus.jpg" alt="mockup project"></div>
+                                <h3 class="content-title"><span>mockup project</span></h3>
+                            </div>
+                        </div>
+                        <div class="tap-contents">
+                            <div class="fade-right">
+                                <div class="tap-content"><img src="image/never-stop-dreaming.jpg" alt="behence project">
+                                </div>
+                                <h3 class="content-title"><span>behence project</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+            <!-- <div class="modal_portfolio">
+                <div class="modal_outside"></div>
+                <div></div>
+                <div class="modal_contents">
+                    <div class="fade-init">
+                        <h2 class="heading mb-2">mockup project</h2>
+                        <div class="modal_details">
+                            <div class="fonts">
+                                <div class="row open-sans-font">
+                                    <i class="icon"><iconify-icon
+                                            icon="line-md:text-box"></iconify-icon></i>"project:"<span
+                                        class="font">Website</span>
+                                </div>
+                                <div class="row open-sans-font">
+                                    <i class="icon"><iconify-icon
+                                            icon="material-symbols:person-outline"></iconify-icon></i>"Client:"<span
+                                        class="font">anonymous</span>
+                                </div>
+                                <div class="row open-sans-font">
+                                    <i class="icon"><iconify-icon
+                                            icon="ph:code-bold"></iconify-icon></i>"Language:"<span
+                                        class="font">HTML,CSS,Javascript</span>
+                                </div>
+                                <div class="row open-sans-font">
+                                    <i class="icon"><iconify-icon
+                                            icon="ci:external-link"></iconify-icon></i>"Preview:"<a class=preview-link
+                                        href="www.google.com">www.google.com</a>
+                                </div>
+                                <figure class="modal_img"><img src="image/art.jpg" alt="MOCKUP PROJECT"></figure>
+                            </div>
+                        </div>
+                        <button class="close-modal"><iconify-icon
+                                icon="zondicons:close-outline"></iconify-icon></button>
+                    </div>
+                </div>
+                <div class="modal_content">
+                    <h2 class="heading mb-2">youtube project</h2>
+                    <div class="fade-init">
+                        <div class="modal_details">
+                            <div class="fonts">
+                                <div class="row open-sans-font">
+                                    <i class="icon"><iconify-icon
+                                            icon="line-md:text-box"></iconify-icon></i>"project:"<span
+                                        class="font">video</span>
+                                </div>
+                                <div class="row open-sans-font">
+                                    <i class="icon"><iconify-icon
+                                            icon="material-symbols:person-outline"></iconify-icon></i>"Client:"<span
+                                        class="font">Youtube</span>
+                                </div>
+                                <div class="row open-sans-font">
+                                    <i class="icon"><iconify-icon
+                                            icon="ph:code-bold"></iconify-icon></i>"Language:"<span class="font">Adobe
+                                        After Effects</span>
+                                </div>
+                                <div class="row open-sans-font">
+                                    <i class="icon"><iconify-icon
+                                            icon="ci:external-link"></iconify-icon></i>"Preview:"<a class=preview-link
+                                        href="www.youtube.com">www.youtube.com</a>
+                                </div>
+                                <button class="close-modal"><iconify-icon
+                                        icon="zondicons:close-outline"></iconify-icon></button>
+                            </div>
+                        </div>
+                        <figure class="modal_img videocontainer">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube-nocookie.com/embed/PiLTR6MtDtk?si=9Z0fbweawfGAZlGf"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </figure>
+                        <button class="close-modal"><iconify-icon
+                                icon="zondicons:close-outline"></iconify-icon></button>
+                    </div>
+                </div>
+                <div class="modal_content">
+                    <div class="fade-init">
+                        <h2 class="heading mb-2">slider project</h2>
+                        <div class="modal_details">
+                            <div class="fonts">
+                                <div class="row open-sans-font">
+                                    <i class="icon"><iconify-icon
+                                            icon="line-md:text-box"></iconify-icon></i>"project:"<span
+                                        class="font">Website</span>
+                                </div>
+                                <div class="row open-sans-font">
+                                    <i class="icon"><iconify-icon
+                                            icon="material-symbols:person-outline"></iconify-icon></i>"Client:"<span
+                                        class="font">anonymous</span>
+                                </div>
+                                <div class="row open-sans-font">
+                                    <i class="icon"><iconify-icon
+                                            icon="ph:code-bold"></iconify-icon></i>"Language:"<span
+                                        class="font">HTML,CSS,Javascript</span>
+                                </div>
+                                <div class="row open-sans-font">
+                                    <i class="icon"><iconify-icon
+                                            icon="ci:external-link"></iconify-icon></i>"Preview:"<a class=preview-link
+                                        href="www.youtube.com">www.youtube.com</a>
+                                </div>
+                                <figure class="modal_img"><img src="image/art.jpg" alt="MOCKUP PROJECT"></figure>
+                            </div>
+                        </div>
+                        <button class="close-modal"><iconify-icon
+                                icon="zondicons:close-outline"></iconify-icon></button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal_content">
+                <div class="fade-init">
+                    <h2 class="heading mb-2">local project</h2>
+                    <div class="modal_details">
+                        <div class="fonts">
+                            <div class="row open-sans-font">
+                                <i class="icon"><iconify-icon icon="line-md:text-box"></iconify-icon></i>"project:"<span
+                                    class="font">video</span>
+                            </div>
+                            <div class="row open-sans-font">
+                                <i class="icon"><iconify-icon
+                                        icon="material-symbols:person-outline"></iconify-icon></i>"Client:"<span
+                                    class="font">anonymous</span>
+                            </div>
+                            <div class="row open-sans-font">
+                                <i class="icon"><iconify-icon icon="ph:code-bold"></iconify-icon></i>"Language:"<span
+                                    class="font">Adobe After Effects</span>
+                            </div>
+                            <div class="row open-sans-font">
+                                <i class="icon"><iconify-icon icon="ci:external-link"></iconify-icon></i>"Preview:"<a
+                                    class=preview-link href="www.youtube.com">www.youtube.com</a>
+                            </div>
+                            <figure class="modal_img"><iframe title="vimeo-player"
+                                    src="https://player.vimeo.com/video/783455773?h=65e20fad6f" width="640" height="360"
+                                    frameborder="0" allowfullscreen></iframe></figure>
+                        </div>
+                    </div>
+                    <button class="close-modal"><iconify-icon icon="zondicons:close-outline"></iconify-icon></button>
+                </div>
+            </div>
+            <div class="modal_content">
+                <div class="fade-init">
+                    <h2 class="heading mb-2">saas project</h2>
+                    <div class="modal_details">
+                        <div class="fonts">
+                            <div class="row open-sans-font">
+                                <i class="icon"><iconify-icon icon="line-md:text-box"></iconify-icon></i>"project:"<span
+                                    class="font">Web Application</span>
+                            </div>
+                            <div class="row open-sans-font">
+                                <i class="icon"><iconify-icon
+                                        icon="material-symbols:person-outline"></iconify-icon></i>"Client:"<span
+                                    class="font">anonymous</span>
+                            </div>
+                            <div class="row open-sans-font">
+                                <i class="icon"><iconify-icon icon="ph:code-bold"></iconify-icon></i>"Language:"<span
+                                    class="font">HTML,CSS,ReactJS</span>
+                            </div>
+                            <div class="row open-sans-font">
+                                <i class="icon"><iconify-icon icon="ci:external-link"></iconify-icon></i>"Preview:"<a
+                                    class=preview-link href="www.youtube.com">www.youtube.com</a>
+                            </div>
+                            <figure class="modal_img"><img src="image/stickies.jpg" alt="SAAS PROJECT"></figure>
+                        </div>
+                    </div>
+                    <button class="close-modal"><iconify-icon icon="zondicons:close-outline"></iconify-icon></button>
+                </div>
+            </div>
+            <div class="modal_content">
+                <div class="fade-init">
+                    <h2 class="heading mb-2">mockup project</h2>
+                    <div class="modal_details">
+                        <div class="fonts">
+                            <div class="row open-sans-font">
+                                <i class="icon"><iconify-icon icon="line-md:text-box"></iconify-icon></i>"project:"<span
+                                    class="font">Website</span>
+                            </div>
+                            <div class="row open-sans-font">
+                                <i class="icon"><iconify-icon
+                                        icon="material-symbols:person-outline"></iconify-icon></i>"Client:"<span
+                                    class="font">anonymous</span>
+                            </div>
+                            <div class="row open-sans-font">
+                                <i class="icon"><iconify-icon icon="ph:code-bold"></iconify-icon></i>"Language:"<span
+                                    class="font">HTML,CSS,Javascript</span>
+                            </div>
+                            <div class="row open-sans-font">
+                                <i class="icon"><iconify-icon icon="ci:external-link"></iconify-icon></i>"Preview:"<a
+                                    class=preview-link href="www.pexels.com">www.pexels.com</a>
+                            </div>
+                            <figure class="modal_img"><img src="image/art.jpg" alt="MOCKUP PROJECT"></figure>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal"><iconify-icon icon="zondicons:close-outline"></iconify-icon></button>
+            </div>
+    </div>
+    <div class="modal_content">
+        <div class="fade-init">
+            <h2 class="heading mb-2">facebook project</h2>
+            <div class="modal_details">
+                <div class="fonts">
+                    <div class="row open-sans-font">
+                        <i class="icon"><iconify-icon icon="line-md:text-box"></iconify-icon></i>"project:"<span
+                            class="font">Website</span>
+                    </div>
+                    <div class="row open-sans-font">
+                        <i class="icon"><iconify-icon
+                                icon="material-symbols:person-outline"></iconify-icon></i>"Client:"<span
+                            class="font">Facebook</span>
+                    </div>
+                    <div class="row open-sans-font">
+                        <i class="icon"><iconify-icon icon="ph:code-bold"></iconify-icon></i>"Language:"<span
+                            class="font">HTML,CSS,Javascript</span>
+                    </div>
+                    <div class="row open-sans-font">
+                        <i class="icon"><iconify-icon icon="ci:external-link"></iconify-icon></i>"Preview:"<a
+                            class=preview-link href="www.facebook.com">www.facebook.com</a>
+                    </div>
+                    <figure class="modal_img"><img src="image/art.jpg" alt="FACEBOOK PROJECT"></figure>
+                </div>
+            </div>
+            <button class="close-modal"><iconify-icon icon="zondicons:close-outline"></iconify-icon></button>
+        </div>
+    </div>
+    <div class="modal_content">
+        <div class="fade-init">
+            <h2 class="heading mb-2">dribble project</h2>
+            <div class="modal_details">
+                <div class="fonts">
+                    <div class="row open-sans-font">
+                        <i class="icon"><iconify-icon icon="line-md:text-box"></iconify-icon></i>"project:"<span
+                            class="font">Website</span>
+                    </div>
+                    <div class="row open-sans-font">
+                        <i class="icon"><iconify-icon
+                                icon="material-symbols:person-outline"></iconify-icon></i>"Client:"<span
+                            class="font">dribble</span>
+                    </div>
+                    <div class="row open-sans-font">
+                        <i class="icon"><iconify-icon icon="ph:code-bold"></iconify-icon></i>"Language:"<span
+                            class="font">HTML,CSS,Javascript</span>
+                    </div>
+                    <div class="row open-sans-font">
+                        <i class="icon"><iconify-icon icon="ci:external-link"></iconify-icon></i>"Preview:"<a
+                            class=preview-link href="www.dribble.com">www.dribble.com</a>
+                    </div>
+                    <figure class="modal_img"><img src="image/never-stop-learning.jpg" alt="DRIBBLE PROJECT">
+                    </figure>
+                </div>
+            </div>
+            <button class="close-modal"><iconify-icon icon="zondicons:close-outline"></iconify-icon></button>
+        </div>
+    </div>
+    <div class="modal_content">
+        <div class="fade-init">
+            <h2 class="heading mb-2">behence project</h2>
+            <div class="modal_details">
+                <div class="fonts">
+                    <div class="row open-sans-font">
+                        <i class="icon"><iconify-icon icon="line-md:text-box"></iconify-icon></i>"project:"<span
+                            class="font">Website</span>
+                    </div>
+                    <div class="row open-sans-font">
+                        <i class="icon"><iconify-icon
+                                icon="material-symbols:person-outline"></iconify-icon></i>"Client:"<span
+                            class="font">anonymous</span>
+                    </div>
+                    <div class="row open-sans-font">
+                        <i class="icon"><iconify-icon icon="ph:code-bold"></iconify-icon></i>"Language:"<span
+                            class="font">HTML,CSS,Javascript</span>
+                    </div>
+                    <div class="row open-sans-font">
+                        <i class="icon"><iconify-icon icon="ci:external-link"></iconify-icon></i>"Preview:"<a
+                            class=preview-link href="www.behance.com">www.behance.com</a>
+                    </div>
+                    <figure class="modal_img"><img src="image/never-stop-dreaming.jpg" alt="MOCKUP PROJECT">
+                    </figure>
+                </div>
+            </div>
+            <button class="close-modal"><iconify-icon icon="zondicons:close-outline"></iconify-icon></button>
+        </div>
+    </div> -->
+    </div>
+    <!-- <a href="image/art.jpg" data-lightbox="roadtrip">MOCKUP PROJECT</a>
+            <a href="image/youtube.jpg" data-lightbox="roadtrip">YOUTUBE PROJECT</a>
+            <a href="image/djjpg.jpg" data-lightbox="roadtrip">SLIDER PROJECT</a>
+            <a href="image/communit.webp" data-lightbox="roadtrip">LOCAL PROJECT</a>
+            <a href="image/stickies.jpg" data-lightbox="roadtrip">SASS PROJECT</a>
+            <a href="image/cactus.jpg" data-lightbox="roadtrip">MOCKUP PROJECT</a>
+            <a href="image/facebook.webp" data-lightbox="roadtrip">FACEBOOK PROJECT</a>
+            <a href="image/never-stop-learning.jpg" data-lightbox="roadtrip">DRIBBLE PROJECT</a>
+            <a href="image/never-stop-dreaming.jpg" data-lightbox="roadtrip">BEHENCE PROJECT</a> -->
+    </main>
+    <footer></footer>
+    <script src="common.js"></script>
+    <!-- <script src="path/to/lightbox.js"></script> -->
+    <script src="myportfolio.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+
+</html>

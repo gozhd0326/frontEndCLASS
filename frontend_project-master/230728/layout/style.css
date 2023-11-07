@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* calltaction:사용자들의 구매를 유도 */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container .box {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 40px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    gap: 30px;
+}
+
+.container .box.blue {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 40px;
+    border: 2px solid darkblue;
+    border-radius: 20px;
+    gap: 30px;
+}
+
+.box .blue2 {
+    color: darkblue;
+}
+
+.box .text {
+    line-height: 1.75;
+    font-weight: 600;
+    color: rgb(150, 150, 150);
+}
+
+.box .price {
+    display: flex;
+    align-items: first baseline;
+}
+
+.price .b {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.price .m {
+    font-weight: 700;
+    font-size: 13px;
+    color: rgb(100, 100, 100);
+}
+
+
+.buy {
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    background-color: white;
+    height: 70px;
+    font-size: 18px;
+    font-weight: 750;
+    color: darkblue;
+}
+
+.buy.blue3 {
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    background-color: darkblue;
+    font-size: 18px;
+    font-weight: 750;
+    color: white;
+}
+
+.explain {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 8px;
+    color:rgb(150, 150, 150);
+    font-weight: 800;
+}
+
+.list {display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon {
+    font-size: 18px;
+    color: darkblue;
+}
