@@ -1,0 +1,3 @@
+fetch( url , {옵션} } ).then( ).then( )
+
+fetch( url , {header : {ex)APIKEY:1234567...} } )

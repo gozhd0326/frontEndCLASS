@@ -1,0 +1,7 @@
+웹페이지 만들 때 폰트 사이즈 정하기
+
+bigTitle :3.5rem
+smallTitle : 2.5rem
+title : 1.5rem
+constent : 1rem
+detail : 0.7rem

@@ -1,0 +1,4 @@
+ //frontEnd-localhost:3000, backEnd-localhost:8080, DB-localhost:3306 or 3307
+  //react에서는 확장프로그램을 터미널에서 npm i 라이브러리 이름 (ex) npm i react-query =>package.json에서 잘 설치되었는지 확인하기
+  //react-query는 DB를 언제 받아와야되는지.. fetch함수(비동기 함수라서 요청이 있을 때까지 기다렸다가 실행)는 react의 성격과는 맞지 않기 때문에 사용함(react는 랜더링을 매번하지 않기 때문에!)fetch를 업그레이드 시켜주는 라이브러리
+  //유즈 쿼리를 사용할 수 있게 됨.
