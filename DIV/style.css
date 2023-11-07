@@ -1,0 +1,27 @@
+* {
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 30px;
+    background-color: rgba(0, 195, 255, 0.541);
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    height: 25vh;
+    background-image: url('https://images.pexels.com/photos/17648793/pexels-photo-17648793.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load');
+    /* '주소 넣을 때 작은 따옴표로 주소 넣기' */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment:fixed;
+}
+
+.container h2 {
+    font-size: 30px;
+}
+
+.container p {
+    font-size: 24px;
+}

@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.active {
+    font-size: 60px;
+    color: darkblue !important;
+    /* !important;제일 최우선적으로 사용됨. 사용을 별로 권장하진 않음 */
+    font-weight: 100;
+}
+
+.titlestyle{
+    width:450px;
+}
