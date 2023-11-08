@@ -1,0 +1,183 @@
+참고 사이트 : https://velog.io/@simchodi/Git-%EC%B4%88%EA%B8%B0%EC%84%B8%ED%8C%85-%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%81%EC%96%B4
+
+
+💛 초기세팅
+1) 윈도우와 맥의 엔터방식 차이로 인한 오류 방지
+
+git config --global core.autocrlf true 
+2) 사용자 이름, 이메일 주소 설정
+
+git config --global user.name "(본인 이름)"
+git config --global user.email "(본인 이메일)"
+3) 사용자 이름, 이메일 주소 설정 확인
+
+git config --global user.name
+git config --global user.email
+4) 브랜치명 master > main으로 변경
+(master는 노예제도를 연상시킨다고 하여 main으로 사용함)
+
+git config --global init.defaultBranch main
+5) Git 저장소 생성
+(저장소를 만들 폴더로 이동 후 하는 것이 좋음. 현재 디렉토리를 기준으로 저장소가 생성됨)
+
+git init
+💛 Git 명령어
+1) 변경사항 확인
+
+git status
+2) 변경사항 스테이지에 올리기
+
+git add (파일명)
+git add .							//변경된 모든 파일 add
+3) commit하기
+
+git commit -m "(커밋 메세지)"
+git commit -am "(커밋 메세지")		//add + commit 동시에(한번은 commit 되어 있는 파일만 가능 => 즉, 처음엔 불가능)
+4) commit 로그 확인하기
+
+git log
+git log --oneline 					//커밋 내역을 한줄씩 보여줌.
+git log --graph					    //커밋 내역을 시각화해서 보여줌.
+git log --branches					//각 브랜치의 커밋내역을 보여줌.
+git log main..test					//test브랜치에만 있는 
+5) 수정내용 확인하기
+
+git diff							//커밋된 내용과 아직 커밋 하지 않은 파일의 현재 어디가 다른지
+6) 방금 커밋한 메세지 수정하기
+
+git commit --amend
+💛 브랜치
+1) 브랜치 목록보기
+
+git branch
+2) 새 브랜치 만들기
+
+git branch (브랜치명)
+3) 브랜치로 이동
+
+git checkout (브랜치명)
+4) 새 브랜치 만들고 이동
+
+git checkout -b (브랜치명)
+5) 브랜치 병합
+
+git checkout (브랜치명A)			//A로 이동(보통 main)
+git merge (병합할 브랜치명B)		//A에 B를 병합
+6) 로컬저장소 브랜치 삭제
+
+git branch -d (브랜치명)
+7) 로컬 & 원격저장소 브랜치 삭제
+
+git push origin --delete (브랜치명)
+💛 되돌리기
+1) 스테이징 되돌리기
+
+git reset HEAD (파일명)
+2) 최신 커밋 + 스테이징 되돌리기
+
+git reset HEAD^				//최근 커밋 취소되고, 스테이징도 함께 취소됨
+git reset HEAD^3			//최근 3개의 커밋 취소
+git reset --soft HEAD^		//최근 커밋만 취소됨.
+git reset --mixed HEAD^		//최근 커밋 + 스테이징도 취소됨(default)
+git reset --hard HEAD^		//최근 커밋 + 스테이징 취소되고 파일도 삭제됨(복구 못함)
+3) 특정 커밋으로 되돌리기
+
+git reset (커밋해시)			//해당 해시로 커밋되고, 스테이징도 함께 취소됨(변경 내용은 그대로)
+git reset --hard (커밋해시)	//해당 해시로 커밋되고, 이 전 커밋내용은 모두 삭제됨
+4) 커밋 삭제하지 않고 되돌리기
+
+git revert (취소할 커밋해시)	//커밋내역이 그대로 남아서 돌아갈 수 있음
+💛 수정 중인 파일 감추기 및 되돌리기
+파일을 수정하다가 급하게 다른 파일을 커밋해야 하는 경우에
+커밋하지 않은 파일들을 계속 커밋하라고 뜰 때 잠깐 숨겨두었다가 작업을 다 끝내고
+숨겨둔 파일을 다시 꺼내오는 방법
+(단, tracked 상태여야함. 즉 한번은 커밋한 상태)
+
+1) 파일 감추기
+
+git stash
+git stash list
+git stash pop				//가장 최근(마지막)에 넣은 파일 먼저 나옴. 변경내역 있다고 뜸
+💛 원격저장소
+1) 원격저장소 연결
+
+git remote add origin (원격 주소)		//원격저장소(origin)를 추가하겠다고 깃에게 알려주는 것
+2) 원격저장소 연결확인
+
+git remote -v
+3) 맨 처음 원격 저장소에 파일 올리기
+
+git push -u origin main					//내 컴퓨터에 있는 내용을 원격 저장소에 처음에 한번 연결할 때
+4) 원격 저장소에 파일 올리기
+
+git push								//초기 연결이 끝나면 그냥 push하면 됨.
+git push origin (브랜치명)				//원격저장소에 해당브랜치 푸쉬
+5) 원격 저장소에서 파일 내려받기
+
+git pull
+6) 원격저장소 연결 해제
+
+git remote remove origin
+💛 GitHub 접속용 SSH키 만들기
+로컬 개발환경에서 버전관리를 한다면, SSH키가 없어도 무관하지만, 외부 Git서버에서 코드를 clone하거나 push하려면 SSH프로토콜을 사용한다.
+SSH 원격 접속은 사용하고 있는 기기를 깃허브에 인증하는 방식이다.
+(기기 자체가 인증되는 것이기 때문에 번거롭게 로그인을 하지 않아도 됨)
+
+사용자 컴퓨터에서 깃허브 저장소에 접속하면
+사용자가 깃허브에 등록해놓은 공개키와 사용자 컴퓨터에 프라이빗키를 비교해서
+두 키가 서로 맞으면 연결됨.
+
+공개키: 개인키와 한 쌍을 이룸. 외부로 공개되는 키.
+개인키: 개인 비밀번호 같은 역할. 다른사람에게 절대 노출 되어서는 안됨.
+1) SSH키 존재여부 확인
+
+cd ~/.ssh
+ls
+만약, id_ed25519와 id_ed25519.pub
+혹은 id_rsa와 id_rsa.pub 파일쌍이 있다면,
+이미 키를 생성한 것이 있다는 뜻임.
+
+2) SSH키 생성
+
+ssh-keygen -t ed25519 -C "(본인 이메일)"
+위의 옵션으로 생성되지 않을 경우 아래 방법 사용
+
+ssh-keygen -t rsa -b 4096 -C "(본인 이메일)"
+SSH키 확인 (.pub이 공개키)
+
+cat id_rsa
+cat id_rsa.pub
+3) 공개키 GitHub 계정에 등록
+링크로 들어가서 New SSH Key를 클릭한다.
+https://github.com/settings/keys
+
+공개키를 저장한다.
+
+저장한 공개키는 레파지토리에서 사용가능하다.
+
+
+4) SSH 방식으로 원격저장소 연결
+
+git remote add origin (SSH주소)
+5) 원격저장소 연결 확인
+
+git remote -v
+💛 GitHub 협업하기
+1) 원격저장소 복제하기
+
+git clone (원격저장소 주소) (복제할 디렉터리)		//기존에 연결된 지역 저장소 외에 다른 지역저장소에서 사용할 때 주로 사용
+2) 최신 소스 유지하기
+
+git pull			//제일 최신에 commit된 내용 내려 받기
+git push			//사용자 컴퓨터에 commit 내용 올리기
+3) 원격저장소 브랜치 정보 가져오기
+
+git log --oneline	//(HEAD -> master, origin/mater, origin/HEAD) 최종커밋 모두 일치할 경우
+4) 로컬에서 pull 안될 경우
+
+git branch --set-upstream-to=origin/main main	//로컬에서 원격저장소 추적할 수 있게함
+5) 원격 브랜치 정보만 가져오기
+
+git fetch					//다른 사람이 수정한 소스를 한번 더 훑어보고 로컬에 합치고 싶을 때 사용	
+git checkout FETCH_HEAD		//fetch로 가져온 정보는 FETCH_HEAD라는 브랜치로 가지고 옴
+git diff HEAD origin/master	//로컬의 최신 커밋과 fetch한 커밋의 차이를 비교
