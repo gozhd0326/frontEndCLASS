@@ -1,0 +1,24 @@
+후크는 다른 함수 안에서 호출이 안됨
+
+UseQuery => 후크 
+
+async / await => 둘은 짝궁 , UseQuery 대신에 사용가능
+
+
+await + 함수(fetch)
+1) await 키워드는 뒤에 호출하는 함수가 반드시 Promise를 리턴하는 함수여야 함.
+(promise(비동기처리를 하기 위한 함수))
+2) awiat는 비동기함수가 일을 다 처리할 때까지 프로세스를 멈춘다. 
+3) await 는 반드시 async 키워드가 붙은 함수내에서만 사용할 수 있다.
+
+fetch 를 쓰는 경우는 성공시 if , 실패시 else
+axios 는 try(안에 함수와 성공시 if, else) , catch(실패시) 를 사용해야 함.
+
+
+Axios ( 외부 라이브러리이기 때문에 npm i axios로 라이브러리르 설치해야 함.)
+(브라우저의 버전에 상관없이 작동가능, 직관적임, JSON을 굳이 parsing할 필요가 없음)
+1) npm i axios 설치 필요
+2) backward compatibility 
+  - 구 버전 브라우저에서도 정상 동작
+3) JSON 자동변환
+4) 가독성이 조금 더 높음

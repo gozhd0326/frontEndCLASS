@@ -1,0 +1,81 @@
+- 리액트가 깔려 있지 않은 경우 -
+원하는 디렉토리로 이동한 후에 'npx create-react-app' 명령어를 실행
+(vscode에서 안될경우 해당 폴더 선택 후 shift키 누른채로 마우스 우클 => powershell 열기 누르기) 
+npx create-react-app my-app
+cd my-app
+npm start
+
+----------------------------------------------------------------------------------------------------------
+
+node.module만 필요한 경우 ( vscode에서 안될경우 )
+동일하게 poswershell 열고 그곳에서
+npm install
+npm start
+
+----------------------------------------------------------------------------------------------------------
+
+vscode에서 가능하면 vscode 터미널을 열어 해당 위치에서 (cd 해당폴더명 을 입력하면 그곳으로 이동됨)
+npm install
+npm start
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------
+
+# 에러 메세지가 발생했을 때
+
+1.
+
+PS C:\Users\Administrator\Desktop\Monaca2-main\Frontend> npm install
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR!
+npm ERR! While resolving: react-bubbly-effect-button@1.0.1
+npm ERR! Found: react@18.2.0
+npm ERR! node_modules/react
+npm ERR!   react@"^18.2.0" from the root project
+npm ERR!   peer react@"^18.0.0" from @tanstack/react-query@5.8.4
+npm ERR!   node_modules/@tanstack/react-query
+npm ERR!     @tanstack/react-query@"^5.8.4" from the root project
+npm ERR!   8 more (@testing-library/react, react-chartjs-2, react-dom, ...)
+npm ERR!
+npm ERR! Could not resolve dependency:
+npm ERR! peer react@"^17.0.2" from react-bubbly-effect-button@1.0.1
+npm ERR! node_modules/react-bubbly-effect-button
+npm ERR!   react-bubbly-effect-button@"^1.0.1" from the root project
+npm ERR!
+npm ERR! Conflicting peer dependency: react@17.0.2
+npm ERR! node_modules/react
+npm ERR!   peer react@"^17.0.2" from react-bubbly-effect-button@1.0.1
+npm ERR!   node_modules/react-bubbly-effect-button
+npm ERR!     react-bubbly-effect-button@"^1.0.1" from the root project
+npm ERR!
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR!
+npm ERR!
+npm ERR! For a full report see:
+npm ERR! C:\Users\Administrator\AppData\Local\npm-cache_logs\2024-02-07T16_05_06_342Z-eresolve-report.txt
+
+npm ERR! A complete log of this run can be found in: C:\Users\Administrator\AppData\Local\npm-cache_logs\2024-02-07T16_05_06_342Z-debug-0.log
+
+==> 에러 메시지를 보면, 패키지 'react-bubbly-effect-button'이 React 17 버전을 필요로 하지만,
+ 현재 설치된 React의 버전은 18이라는 문제가 발생하고 있습니다.
+ 이는 'peer dependency' 문제로, 특정 패키지가 다른 패키지의 특정 버전을 필요로 할 때 발생합니다.
+
+==> 이 문제를 해결하는 한 가지 방법은 에러 메시지에서 제안하는 대로
+ '--force' 또는 '--legacy-peer-deps' 옵션을 사용하는 것입니다.
+ 이 옵션들은 npm이 'peer dependency' 문제를 무시하게 합니다.
+
+===> npm install --legacy-peer-deps
+또는
+===> npm install --force
+
+====> 이렇게 하면 'peer dependency' 문제가 무시되고, 패키지 설치가 계속 진행됩니다.
+하지만 이 방법은 잠재적으로 패키지 간의 호환성 문제를 일으킬 수 있으므로 주의가 필요합니다.
+ 따라서, 가능하다면 'react-bubbly-effect-button' 패키지의 최신 버전이 React 18을 지원하는지 확인하거나,
+ 다른 호환되는 패키지를 찾는 것이 좋습니다.
