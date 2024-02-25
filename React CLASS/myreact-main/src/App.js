@@ -25,6 +25,7 @@ import { GameShop } from "./components/GameShopFrontEndT/GameShop";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Chart1 } from "./components/ChartJs/chart1";
 import { Chart2 } from "./components/ChartJs/chart2";
+import { MovieShop } from "./components/MovieShop/MovieShop";
 const GlobalStyle = createGlobalStyle`
 @font-face {
       font-family: 'GmarketSansMedium';
@@ -46,11 +47,11 @@ function App() {
   return (
     <>
       <GlobalStyle />
+      <MovieShop />
       {/* <QueryClientProvider client={client}>
         <GameShop />
       </QueryClientProvider>
-      */}
-      <Chart2 />
+      // */}
     </>
   );
 }
